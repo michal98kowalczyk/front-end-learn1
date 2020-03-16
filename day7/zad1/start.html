@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* animation: photo 1s linear infinite; */
+        }
+
+        img:nth-last-of-type(1) {
+            animation: photo 6s linear infinite;
+        }
+
+
+
+        @keyframes photo {
+            0% {
+
+                opacity: 0;
+            }
+
+            40% {
+
+                opacity: 0;
+            }
+
+            50% {
+
+                opacity: 1;
+            }
+
+
+            90% {
+
+                opacity: 1;
+            }
+
+            100% {
+
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img1.jpg" alt="">
+    <img src="img2.jpg" alt="">
+</body>
+
+</html>
