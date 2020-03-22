@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Powiększ</title>
+    <style>
+        button {
+            padding: 10px;
+            font-size: 50px;
+            font-family: sans-serif;
+            background-color: transparent;
+            border: 2px solid black;
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            position: fixed;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+        }
+    </style>
+</head>
+
+<body>
+    <button>Obróc</button>
+    <div class="square"></div>
+
+    <script>
+        // parametry główne. Za pomocą zmiennych stwórz początkową wartość rotate (zero) i wartość o którą będziesz zmieniał stopnie (o 10 stopnii).
+        const btn = document.querySelector('button');
+        const sqr = document.querySelector('.square');
+
+        let degreeOfRotate = 0;
+        sqr.style.transform = "rotate(" + degreeOfRotate + "deg)";
+
+
+
+        // podpinamy nasłuchiwanie i umeiszczamy w nim funkcje anonimową. Pamiętaj zmieniamy własciwość transform. Za każdym razie obrót zwiększa się od 10 deg. 
+        btn.addEventListener('click', function () {
+            console.log("rotate(" + degreeOfRotate + "deg)");
+            degreeOfRotate += 10;
+            sqr.style.transform = "rotate(" + degreeOfRotate + "deg)";
+        })
+
+        //Bonus dodaj właściwość transition dla div określoną na .5s.
+        sqr.style.transition = ".5s";
+    </script>
+</body>
+
+</html>
