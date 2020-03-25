@@ -1,0 +1,33 @@
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+ul li {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+ul li a {
+  color: white;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+ul li a:hover {
+  background-color: #d00;
+}
+/*# sourceMappingURL=style.css.map */
